@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<center>
+<h1 id="title">Welcome to Selector Practice</h1>
+<label id="lblEmailId">EmailId:</label><input type="text" id="txtEmailId" class="text-input"/><br><br>
+<label id="lblPassword"> Password:</label> <input type="text" id="txtPassword" class="text-input"/><br><br>
+<label id="lblbtn"></label><input type="button" id="btn" value="Login" onclick="validateFields()"/> 
+<hr>
+</center>
+<script>
+$("#title").html("<b style='color:Blue;'>Welcome to Gmail</b>")
+$("#lblEmailId").text("Enter Your EmailId")
+$("#lblbtn").html("<b style='color:red;'>Click</b>")
+$("#lblPassword").text("Enter Your Password")
+$("#btn").css("border","1px solid brown")
+$("input[type='button']").css("color","green")
+$("input[type='button']").css("font-weight","bold")
+$("#txtEmailId").css("border","2px solid brown")
+$("#txtPassword").css("border","2px solid brown") 
+function validateFields(){
+            if ($("#txtEmailId").val() == "")
+			{
+                $("#lblEmailId").css("color", "red");
+				$("#lblEmailId").css("font-weight","bold")
+            } else 
+			{
+                $("#lblEmailId").css("color", "green");
+				$("#lblEmailId").css("font-weight","bold")
+
+            }
+            if ($("#txtPassword").val() == "")
+			{
+                $("#lblPassword").css("color", "red");
+				$("#lblPassword").css("font-weight","bold")
+
+            } else {
+                $("#lblPassword").css("color", "green");
+				$("#lblPassword").css("font-weight","bold")
+
+            }
+        
+}
+
+</script>
+
+</body>
+</html>
